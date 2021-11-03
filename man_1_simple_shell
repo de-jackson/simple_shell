@@ -1,25 +1,76 @@
-.TH man 1 "10-21-2021" "0.01" "hsh man page"
-.SH NAME
-.B hsh
-- Jackson Simple Shell
-.SH SYNOPSIS
-.B hsh
-[No options yet]
-.SH DESCRIPTION
-.B hsh
-is a simple interactive command interpreter. It executes commands read from the standard input. hsh is not fully featured. It can only handle simple commands in the form: "<command> [options]"
-.SH BUILTIN COMMANDS
-.B cd
-- changes the working directory.
-.B env
-- print the environment
-.B exit
-- exit the shell gracefully.
-.B setenv
-- set an environmental variable.
-.SH BUGS
-There are currently a ton of bugs in this code. If any bugs are found, please contact <jackyeyamu@gmail.com>
-.SH AUTHORS
-Jackson Eyamu
-Simon Ugorji
+.\" Manpage for Simple Shell.
 
+.SH NAME
+hsh - Mandalorian Simple Shell
+
+.SH SYNOPSIS
+hsh (does not support arguments)
+
+.SH DESCRIPTION
+Welcome to the Mandalorian Simple Shell project! This program is a simple shell that can be compiled and launched from the command line within any number of Linux versions.
+
+.SH OVERVIEW
+The Mandalorian Simple Shell project is a major team project conducted by Simon Ugorji and Sami Lafine, students at Holberton School.
+
+.SH RETURN VALUE
+The shell returns the error code given by the last completed command followed by either ctrl-d or exit with no status code.
+
+.SH SYNTAX
+MANDALORIAN$ <command> <flags or options> <argument 1> <argument 2> ...
+
+$ <command> | ./hsh
+.SS
+
+.SS
+EXAMPLE 1:
+MANDALORIAN$ /bin/ls
+.SS
+EXAMPLE 2:
+MANDALORIAN$ ls -l
+.SS
+EXAMPLE 3:
+MANDALORIAN$ cat textfile
+.SS
+
+
+.SS
+EXAMPLE 4:
+$ echo "ls -l" | ./hsh
+
+.SH BUILTIN COMMANDS
+.SS alias
+- create or list an alias
+
+.SS cd
+- change directory
+
+.SS env
+- list the current environment variable
+
+.SS exit
+- exit from shell
+
+.SS help
+- display help for a builtin command
+
+.SS history
+- display the command history for the current shell session
+
+.SS setenv
+- set and environment variable
+
+.SS unsetenv
+- unset an environment variable
+
+.SH SEE ALSO
+DASH(1)
+
+.SH BUGS
+No known bugs
+
+.SH AUTHORS
+Simon Ugorji
+        https://github.com/octagon-simon
+
+	Jackson Eyamu
+https://github.com/de-jackson
